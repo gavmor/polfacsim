@@ -41,7 +41,7 @@ end
 
 names = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
 
-tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
+#tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
 
 
 
@@ -61,10 +61,14 @@ def one_round(tribes)
 end
 
 puts tribes
-tribes = IO.read('tribes.txt')
+#tribes = IO.read('tribes.txt')
+tribes = YAML.load(File.open('tribes.yml'))
+
 puts tribes
 
 one_round(tribes)
 puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
-File.open('tribes.txt', 'w') {|f| f.write(tribes) }
+#File.open('tribes.txt', 'w') {|f| f.write(tribes) }
+File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
+
