@@ -25,4 +25,4 @@ end
 
 stuff = build_pop()
 puts stuff
-File.open('tribes.txt', 'w') {|f| f.write(stuff) }
+File.open('tribes.yml', 'w') {|f| f.puts(stuff.to_yaml) }

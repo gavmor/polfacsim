@@ -1,4 +1,4 @@
-
+require 'yaml'
 
 #This function takes a list, and a desired number of contenders and returns a list of randomly selected members of the hat.
 def from_a_hat(hat, contenders)
@@ -41,7 +41,7 @@ end
 
 names = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
 
-#tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
+tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
 
 
 
@@ -60,7 +60,7 @@ def one_round(tribes)
 	end
 end
 
-puts tribes
+#puts tribes
 #tribes = IO.read('tribes.txt')
 tribes = YAML.load(File.open('tribes.yml'))
 
