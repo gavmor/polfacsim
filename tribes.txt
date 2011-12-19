@@ -1,1 +1,0 @@
-{0=>{:name=>"Alpha", :strat=>"Hx", :status=>-400}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>-900}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>-700}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>-1050}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>-1450}}

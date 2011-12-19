@@ -1,21 +1,29 @@
 ---
 0:
-  :name: Alpha
-  :strat: Hx
-  :status: 548718324100
+  :name: Alton
+  :strat: Rt
+  :status: -5263545200
 1:
-  :name: Beta
-  :strat: Hx
-  :status: -700
+  :name: Annie
+  :strat: Do
+  :status: -5453152550
 2:
-  :name: Gamma
-  :strat: Hx
-  :status: -90930472450
+  :name: Jacob
+  :strat: Do
+  :status: -279709350
 3:
-  :name: Delta
-  :strat: Hx
-  :status: -700
+  :name: Mepstead
+  :strat: Pr
+  :status: -3214507750
 4:
-  :name: Epsilon
+  :name: Furlong
   :strat: Hx
-  :status: -1100
+  :status: -22044739050
+5:
+  :name: Caltour
+  :strat: By
+  :status: -25852190000
+6:
+  :name: Brief
+  :strat: Rt
+  :status: 41715240700

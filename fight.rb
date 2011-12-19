@@ -39,36 +39,41 @@ def encounter(a, b, group)
 end
 
 
-names = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
+#names = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
 
-tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
+#tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
 
 
 
 # This function iterates through ever member of the names list, giving each a turn as the argument for take_turn.
-def one_round(tribes)
-
+def one_round(tribes, turns)
+	#Give ever tribe a turn
 	tribes.length.times do |i|
-		5.times do
-			stuff = encounter(tribes[i], tribes[rand(tribes.length)], tribes)
+		puts "#{i}. Tribe #{tribes[i][:name]}, #{tribes[i][:strat]} has #{tribes[i][:status]}."
+		contestants = ""
+		#Current tribe gets an encounter against five random opponents.
+		turns.times do |r|
+			who_next = rand(tribes.length)
 
-			tribes[i][:status] = stuff[0]
-			tribes[1][:status] = stuff[1]
+			#We're looking for status changes, so we run an encounter between tribes[i], whose turn it is,
+			#and tribes[whos_next], the current of #{times} randomly selected opponents.
+			win_loss_adjustments = encounter(tribes[i], tribes[who_next], tribes)
+		
+			tribes[i][:status] = win_loss_adjustments[0]
+			tribes[who_next][:status] = win_loss_adjustments[1]
+			
+			contestants <<  "#{tribes[who_next][:name]}, "
+
 		end
-	puts "Tribe #{tribes[i][:name]} has #{tribes[i][:status]}"
-	
+		puts "#{tribes[i][:name]} fights #{contestants}"
+		puts "Now, tribe #{tribes[0][:name]} has #{tribes[0][:status]}."
 	end
 end
 
-#puts tribes
-#tribes = IO.read('tribes.txt')
+#Load the tribes data from 'tribes.yml'
 tribes = YAML.load(File.open('tribes.yml'))
 
-puts tribes
+#Have the tribes EACH take 5 turn as the agressor.
+one_round(tribes, 5)
 
-one_round(tribes)
-puts "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-
-#File.open('tribes.txt', 'w') {|f| f.write(tribes) }
 File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
-

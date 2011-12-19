@@ -1,4 +1,7 @@
+require 'yaml'
 ##################################################
+
+
 def build_pop()
 	tribes = {}
 	puts "How many tribes in the valley?"
@@ -9,9 +12,12 @@ def build_pop()
 		name = gets.chomp()
 		this_tribe[:name] = name
 		puts "Got it; the honorable #{this_tribe[:name]}"
+
+		strategies = ["Hx", "Do", "Rt", "By", "Pr"]
 		
 		puts "Strategy?"
-		strat = gets.chomp()
+		#strat = gets.chomp()
+		strat = strategies[rand(5)]
 		this_tribe[:strat] = strat
 		puts "Good luck, #{this_tribe[:strat]}"
 		
