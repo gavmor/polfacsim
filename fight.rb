@@ -70,6 +70,10 @@ def one_round(tribes, turns)
 	end
 end
 
+def leaderboard(tribes)
+	#This function takes {tribes}, and outputs a list of tribes[n][:names], sorted by tribes[n][:status].
+end
+
 #Load the tribes data from 'tribes.yml'
 tribes = YAML.load(File.open('tribes.yml'))
 
