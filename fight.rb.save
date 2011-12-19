@@ -1,0 +1,26 @@
+
+
+#This function takes a list, and a desired number of contenders and returns a list of randomly selected members of the hat.
+def from_a_hat(hat, contenders)
+	output = []
+	contenders.times do
+		output.concat( [hat[rand(hat.length)]] )
+	end
+	puts output
+end
+
+# Here is where current_player takes a turn facing off.
+def take_turn(me, everyone)
+	encounters = from_a_hat(everyone, 5)
+	puts encounters
+end
+
+# This function iterates through ever member of the names list, giving each a turn as the argument for take_turn.
+def one_round
+end
+
+tribes = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
+
+tribe_a
+
+take_turn("John", names)
