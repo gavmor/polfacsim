@@ -1,4 +1,4 @@
-require 'yaml'
+require 'yaml' #to save #{tribes}, later.
 
 #This function takes a list, and a desired number of contenders and returns a list of randomly selected members of the hat.
 def from_a_hat(hat, contenders)
@@ -23,9 +23,9 @@ def encounter(a, b, group)
 	
 	#If they're the same, and Hx, aka 1, they fight, and their odds are even.
 	when  0; if a_act.odd? == true
-				var = rand(2)        	 	
-				if var.odd? == true				
-					a[:status] -= 100 && b[:status] += 50
+			var = rand(2)        	 	
+			if var.odd? == true				
+				a[:status] -= 100 && b[:status] += 50
 	#If they're the same, and Do, aka 0, they flee.
    		 else a[:status] += 50 && b[:status] -= 100
 				end
@@ -39,9 +39,8 @@ def encounter(a, b, group)
 end
 
 
-#names = ["John", "Vana", "Alton", "Norcia", "Samus", "M'dee", "Fuller", "Annie", "Chloe", "lxpk"]
 
-#tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
+not_tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
 
 
 
@@ -49,7 +48,7 @@ end
 def one_round(tribes, turns)
 	#Give ever tribe a turn
 	tribes.length.times do |i|
-		puts "#{i}. Tribe #{tribes[i][:name]}, #{tribes[i][:strat]} has #{tribes[i][:status]}."
+#		puts "#{i}. Tribe #{tribes[i][:name]}, #{tribes[i][:strat]} has #{tribes[i][:status]}."
 		contestants = ""
 		#Current tribe gets an encounter against five random opponents.
 		turns.times do |r|
@@ -65,19 +64,32 @@ def one_round(tribes, turns)
 			contestants <<  "#{tribes[who_next][:name]}, "
 
 		end
-		puts "#{tribes[i][:name]} fights #{contestants}"
-		puts "Now, tribe #{tribes[0][:name]} has #{tribes[0][:status]}."
+#		puts "#{tribes[i][:name]} fights #{contestants}"
+#		puts "Now, tribe #{tribes[0][:name]} has #{tribes[0][:status]}."
 	end
 end
 
 def leaderboard(tribes)
 	#This function takes {tribes}, and outputs a list of tribes[n][:names], sorted by tribes[n][:status].
+	
+	board = []
+	tribes.length.times do	|i|
+		board[i] = [tribes[i][:name], tribes[i][:status]]
+	end
+	sorted_board = board.sort_by { |a| a[1] }
+
+	board.length.times do |i|
+		puts "#{sorted_board[i][0]}: #{sorted_board[i][1]}"
+	end
+
 end
 
 #Load the tribes data from 'tribes.yml'
 tribes = YAML.load(File.open('tribes.yml'))
 
 #Have the tribes EACH take 5 turn as the agressor.
-one_round(tribes, 5)
+one_round(tribes, 1)
 
+leaderboard(tribes)
+#puts leaderboard(tribes)
 File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
