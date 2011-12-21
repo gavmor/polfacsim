@@ -1,5 +1,6 @@
 require 'yaml' #to save #{tribes}, later.
 
+
 #This function takes a list, and a desired number of contenders and returns a list of randomly selected members of the hat.
 def from_a_hat(hat, contenders)
 	output = []
@@ -19,19 +20,24 @@ def encounter(a, b, group)
 
 	#Players with act of 0 is Docile, 1 is Hxing.  Whomever wins gets the gold.
 	case a_act <=> b_act
-	when -1; a[:status] -= 100 && b[:status] += 50
+	when -1; a[:status] -= 100
+		b[:status] += 50
 	
 	#If they're the same, and Hx, aka 1, they fight, and their odds are even.
 	when  0; if a_act.odd? == true
 			var = rand(2)        	 	
 			if var.odd? == true				
-				a[:status] -= 100 && b[:status] += 50
+				a[:status] -= 100 
+				b[:status] += 50
 	#If they're the same, and Do, aka 0, they flee.
-   		 else a[:status] += 50 && b[:status] -= 100
+   		 else a[:status] += 50 
+   		 	b[:status] -= 100
 				end
 			else a[:status] += 0
 			end
-	when +1; a[:status] += 100 && b[:status] -= 100
+	when +1; a[:status] += 100 
+		b[:status] -= 100
+		
 	end
 
     adjustments = [a[:status], b[:status]]
@@ -93,3 +99,5 @@ one_round(tribes, 1)
 leaderboard(tribes)
 #puts leaderboard(tribes)
 File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
+
+puts "\e[5m ------------------------------------------------------------------------------------ \e[0m"

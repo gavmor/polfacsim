@@ -1,73 +1,73 @@
 ---
 0:
-  :name: Tosotontin
-  :strat: By
-  :status: -247
+  :name: ! "\e[31mTosotontin\e[0m"
+  :strat: Hx
+  :status: 1051
 1:
-  :name: Ximomecolo
+  :name: ! "\e[33mXimomecolo\e[0m"
   :strat: By
-  :status: 498
+  :status: 1901
 2:
-  :name: Tonxōequili
-  :strat: Hx
-  :status: -447
-3:
-  :name: Ontennotinxa
-  :strat: By
-  :status: -1190
-4:
-  :name: Pocochtencho
+  :name: ! "\e[36mTonxōequili\e[0m"
   :strat: Do
-  :status: -300
+  :status: -2099
+3:
+  :name: ! "\e[35mOntennotinxa\e[0m"
+  :strat: Pr
+  :status: -749
+4:
+  :name: ! "\e[35mPocochtencho\e[0m"
+  :strat: Pr
+  :status: -899
 5:
-  :name: Quiahuochtliatzie
+  :name: ! "\e[35mQuiahuochtliatzie\e[0m"
   :strat: Pr
-  :status: 99
+  :status: -199
 6:
-  :name: Toxōenoxima
-  :strat: Hx
-  :status: -201
+  :name: ! "\e[35mToxōenoxima\e[0m"
+  :strat: Pr
+  :status: -49
 7:
-  :name: Tlanacahuātlianamiol
-  :strat: Pr
-  :status: -499
-8:
-  :name: Coyatlolatlan’quitaziatoc
-  :strat: Rt
-  :status: 49
-9:
-  :name: Ayame’anzanomatzo
-  :strat: Pr
-  :status: 398
-10:
-  :name: Tochtlia’tōequilisconochla
-  :strat: Hx
-  :status: -346
-11:
-  :name: Tlōxō’inomesochque
-  :strat: Rt
-  :status: 396
-12:
-  :name: Tlōsoto’locatzomitzio’mitellatlozo
-  :strat: Rt
-  :status: 48
-13:
-  :name: Huotlaca’huamannenpaxixlla
-  :strat: Pr
-  :status: -299
-14:
-  :name: Ommayacaxiyolillo’chcotlopaxiyōhimi
-  :strat: Pr
-  :status: 1141
-15:
-  :name: Tantlahtoc
+  :name: ! "\e[33mTlanacahuātlianamiol\e[0m"
   :strat: By
-  :status: 99
-16:
-  :name: Tlioxtla’huayotlinoaxlla
-  :strat: Pr
-  :status: -498
-17:
-  :name: Pixō’huoquimicahla
+  :status: 951
+8:
+  :name: ! "\e[36mCoyatlolatlan’quitaziatoc\e[0m"
+  :strat: Do
+  :status: -3299
+9:
+  :name: ! "\e[36mAyame’anzanomatzo\e[0m"
+  :strat: Do
+  :status: -2499
+10:
+  :name: ! "\e[33mTochtlia’tōequilisconochla\e[0m"
+  :strat: By
+  :status: 1101
+11:
+  :name: ! "\e[36mTlōxō’inomesochque\e[0m"
+  :strat: Do
+  :status: -2699
+12:
+  :name: ! "\e[32mTlōsoto’locatzomitzio’mitellatlozo\e[0m"
   :strat: Rt
-  :status: 103
+  :status: -2199
+13:
+  :name: ! "\e[33mHuotlaca’huamannenpaxixlla\e[0m"
+  :strat: By
+  :status: 1401
+14:
+  :name: ! "\e[35mOmmayacaxiyolillo’chcotlopaxiyōhimi\e[0m"
+  :strat: Pr
+  :status: -749
+15:
+  :name: ! "\e[35mTantlahtoc\e[0m"
+  :strat: Pr
+  :status: -149
+16:
+  :name: ! "\e[31mTlioxtla’huayotlinoaxlla\e[0m"
+  :strat: Hx
+  :status: 851
+17:
+  :name: ! "\e[32mPixō’huoquimicahla\e[0m"
+  :strat: Rt
+  :status: -1499

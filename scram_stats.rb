@@ -1,0 +1,52 @@
+require 'yaml'
+##################################################
+
+tribes = YAML.load(File.open('tribes.yml'))
+
+
+def scram_strats(tribes)
+	
+#	puts "How many tribes in the valley?"
+	pop = tribes.length	
+	pop.times do |i|
+#		this_tribe = {}
+#		puts "Name?"
+#		name = gets.chomp()
+#		this_tribe[:name] = name
+		this_tribe = tribes[i]
+		puts "Got it; the honorable #{tribes[i][:name]}"
+
+		strategies = ["Hx", "Do", "Rt", "By", "Pr"]
+		
+		#puts "Strategy?"
+		#strat = gets.chomp()
+		strat = strategies[rand(5)]
+		this_tribe[:strat] = strat
+		case this_tribe[:strat] 
+		when "Hx"
+			this_tribe[:name] = "\e[31m" + this_tribe[:name] + "\e[0m"
+		when "Do"
+			this_tribe[:name] = "\e[36m" + this_tribe[:name] + "\e[0m"
+		when "Rt"
+			this_tribe[:name] = "\e[32m" + this_tribe[:name] + "\e[0m"
+		when "By"
+			this_tribe[:name] = "\e[33m" + this_tribe[:name] + "\e[0m"
+		else
+			this_tribe[:name] = "\e[35m" + this_tribe[:name] + "\e[0m"
+			
+		end
+		
+		puts "Good luck, #{this_tribe[:strat]}"
+		
+	
+		this_tribe[:status] = 0
+		
+		tribes[i] = this_tribe
+		
+	end
+    return tribes
+end
+
+stuff = scram_strats(tribes)
+puts stuff
+File.open('tribes.yml', 'w') {|f| f.puts(stuff.to_yaml) }
