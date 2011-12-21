@@ -5,7 +5,7 @@ tribes = YAML.load(File.open('tribes.yml'))
 
 def clear(tribes)
 	tribes.length.times do |i|
-		tribes[i][:status] = 5000
+		tribes[i][:status] = 0
 	end
 end
 

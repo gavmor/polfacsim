@@ -18,25 +18,32 @@ def encounter(a, b, group)
 	a_act = actions[ a[:strat] ]  
 	b_act = actions[ b[:strat] ]
 
-	#Players with act of 0 is Docile, 1 is Hxing.  Whomever wins gets the gold.
 	case a_act <=> b_act
-	when -1; a[:status] -= 100
-		b[:status] += 50
+
+	#Players with act of 0 is Docile, 1 is Hxing.  No fight. Whomever wins gets the gold.
+	when -1; a[:status] -= 1
+		b[:status] += 100
 	
-	#If they're the same, and Hx, aka 1, they fight, and their odds are even.
+	#If they're the same, and Hx, aka _act 1, they fight, and their odds are even.
 	when  0; if a_act.odd? == true
 			var = rand(2)        	 	
-			if var.odd? == true				
-				a[:status] -= 100 
-				b[:status] += 50
-	#If they're the same, and Do, aka 0, they flee.
-   		 else a[:status] += 50 
-   		 	b[:status] -= 100
-				end
-			else a[:status] += 0
+			if var.odd? == true
+			#Heads, I get it.				
+				a[:status] -= 110 
+				b[:status] += 40
+
+			#Tails the other guy gets it.
+			else a[:status] += 40 
+				b[:status] -= 110
 			end
+			
+	#If they're the same, and Do, aka _act 0, they flee
+		else a[:status] += 1
+			b[:status] += 1
+		end
+	
 	when +1; a[:status] += 100 
-		b[:status] -= 100
+		b[:status] -= 1
 		
 	end
 

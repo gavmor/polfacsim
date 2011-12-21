@@ -19,15 +19,15 @@ def scram_strats(tribes)
 
 		case this_tribe[:strat] 
 		when "Hx"
-			this_tribe[:name] = "\e[31m" + this_tribe[:name] + "\e[0m"
+			this_tribe[:name] = "\e[31m" + this_tribe[:name][5...-4] + "\e[0m"
 		when "Do"
-			this_tribe[:name] = "\e[36m" + this_tribe[:name] + "\e[0m"
+			this_tribe[:name] = "\e[36m" + this_tribe[:name][5...-4] + "\e[0m"
 		when "Rt"
-			this_tribe[:name] = "\e[32m" + this_tribe[:name] + "\e[0m"
+			this_tribe[:name] = "\e[32m" + this_tribe[:name][5...-4] + "\e[0m"
 		when "By"
-			this_tribe[:name] = "\e[33m" + this_tribe[:name] + "\e[0m"
+			this_tribe[:name] = "\e[33m" + this_tribe[:name][5...-4] + "\e[0m"
 		else
-			this_tribe[:name] = "\e[35m" + this_tribe[:name] + "\e[0m"
+			this_tribe[:name] = "\e[35m" + this_tribe[:name][5...-4] + "\e[0m"
 			
 		end
 		

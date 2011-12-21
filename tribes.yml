@@ -1,73 +1,121 @@
 ---
 0:
-  :name: ! "\e[35mTosotontin\e[0m"
-  :strat: Pr
-  :status: -21900
+  :name: ! "\e[33mNKGOWLTO\e[0m"
+  :strat: By
+  :status: 3430
 1:
-  :name: ! "\e[36mXimomecolo\e[0m"
-  :strat: Do
-  :status: -102300
+  :name: ! "\e[31mPYPQFSQL\e[0m"
+  :strat: Hx
+  :status: 4130
 2:
-  :name: ! "\e[32mTonxōequili\e[0m"
+  :name: ! "\e[32mWRJVUHXO\e[0m"
   :strat: Rt
-  :status: -103500
+  :status: 9
 3:
-  :name: ! "\e[36mOntennotinxa\e[0m"
-  :strat: Do
-  :status: -101600
-4:
-  :name: ! "\e[36mPocochtencho\e[0m"
-  :strat: Do
-  :status: -101900
-5:
-  :name: ! "\e[33mQuiahuochtliatzie\e[0m"
-  :strat: By
-  :status: 62050
-6:
-  :name: ! "\e[31mToxōenoxima\e[0m"
-  :strat: Hx
-  :status: 53050
-7:
-  :name: ! "\e[35mTlanacahuātlianamiol\e[0m"
-  :strat: Pr
-  :status: -16850
-8:
-  :name: ! "\e[35mCoyatlolatlan’quitaziatoc\e[0m"
-  :strat: Pr
-  :status: -24350
-9:
-  :name: ! "\e[36mAyame’anzanomatzo\e[0m"
-  :strat: Do
-  :status: -106300
-10:
-  :name: ! "\e[35mTochtlia’tōequilisconochla\e[0m"
-  :strat: Pr
-  :status: -20400
-11:
-  :name: ! "\e[33mTlōxō’inomesochque\e[0m"
-  :strat: By
-  :status: 59200
-12:
-  :name: ! "\e[32mTlōsoto’locatzomitzio’mitellatlozo\e[0m"
+  :name: ! "\e[32mHQHSKNJS\e[0m"
   :strat: Rt
-  :status: -101400
+  :status: 4
+4:
+  :name: ! "\e[36mIGCVGJFE\e[0m"
+  :strat: Do
+  :status: 7
+5:
+  :name: ! "\e[36mGPXIGCDV\e[0m"
+  :strat: Do
+  :status: 28
+6:
+  :name: ! "\e[33mFXJSHMOU\e[0m"
+  :strat: By
+  :status: 3340
+7:
+  :name: ! "\e[36mUQDKIKGX\e[0m"
+  :strat: Do
+  :status: 7
+8:
+  :name: ! "\e[35mFJIFALWB\e[0m"
+  :strat: Pr
+  :status: 1264
+9:
+  :name: ! "\e[33mHQDGNFUH\e[0m"
+  :strat: By
+  :status: 3810
+10:
+  :name: ! "\e[36mJDLCSSHQ\e[0m"
+  :strat: Do
+  :status: 16
+11:
+  :name: ! "\e[36mRDGBAWID\e[0m"
+  :strat: Do
+  :status: 22
+12:
+  :name: ! "\e[35mCGEXWXFN\e[0m"
+  :strat: Pr
+  :status: 1643
 13:
-  :name: ! "\e[35mHuotlaca’huamannenpaxixlla\e[0m"
+  :name: ! "\e[35mOOAWNBVW\e[0m"
   :strat: Pr
-  :status: -21350
+  :status: 1013
 14:
-  :name: ! "\e[31mOmmayacaxiyolillo’chcotlopaxiyōhimi\e[0m"
-  :strat: Hx
-  :status: 57200
+  :name: ! "\e[36mKDAKRQRX\e[0m"
+  :strat: Do
+  :status: 23
 15:
-  :name: ! "\e[35mTantlahtoc\e[0m"
-  :strat: Pr
-  :status: -20250
+  :name: ! "\e[33mKBNFGXKB\e[0m"
+  :strat: By
+  :status: 4540
 16:
-  :name: ! "\e[33mTlioxtla’huayotlinoaxlla\e[0m"
-  :strat: By
-  :status: 57050
+  :name: ! "\e[36mECXMLVWD\e[0m"
+  :strat: Do
+  :status: 4
 17:
-  :name: ! "\e[33mPixō’huoquimicahla\e[0m"
+  :name: ! "\e[32mEOKGVPQF\e[0m"
+  :strat: Rt
+  :status: 31
+18:
+  :name: ! "\e[35mNFDGNMPK\e[0m"
+  :strat: Pr
+  :status: 1412
+19:
+  :name: ! "\e[31mVHQIPPJK\e[0m"
+  :strat: Hx
+  :status: 2560
+20:
+  :name: ! "\e[32mHPPXBQVI\e[0m"
+  :strat: Rt
+  :status: 15
+21:
+  :name: ! "\e[31mTAVLLGHE\e[0m"
+  :strat: Hx
+  :status: 4020
+22:
+  :name: ! "\e[36mHUFKCGOL\e[0m"
+  :strat: Do
+  :status: 17
+23:
+  :name: ! "\e[33mENITNCEC\e[0m"
   :strat: By
-  :status: 60850
+  :status: 3580
+24:
+  :name: ! "\e[35mJMPRDTVF\e[0m"
+  :strat: Pr
+  :status: 956
+25:
+  :name: ! "\e[36mFWKRRRPY\e[0m"
+  :strat: Do
+  :status: 5
+26:
+  :name: ! "\e[36mPBQLXOXF\e[0m"
+  :strat: Do
+  :status: 17
+27:
+  :name: ! "\e[33mIOWGFHJG\e[0m"
+  :strat: By
+  :status: 3600
+28:
+  :name: ! "\e[36mQDOWFILC\e[0m"
+  :strat: Do
+  :status: 22
+29:
+  :name: ! "\e[36mHYEEWTFJ\e[0m"
+  :strat: Do
+  :status: 25
