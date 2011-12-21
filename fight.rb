@@ -34,13 +34,13 @@ def encounter(a, b, group)
 	when  0; if a_act.odd? == true
 			var = rand(2)        	 	
 			if var.odd? == true
-			#Heads, I get it.				
-				a[:status] -= 510 
+			#Heads, I get injured.				
+				a[:status] -= 110
 				b[:status] += 40
 
-			#Tails the other guy gets it.
+			#Tails the other guy gets injured.
 			else a[:status] += 40 
-				b[:status] -= 510
+				b[:status] -= 110
 			end
 			
 	#If they're the same, and Do, aka _act 0, they flee
@@ -90,20 +90,62 @@ def one_round(tribes, turns)
 	end
 end
 
+def recolor(this_tribe)
+
+	case this_tribe[:strat] 
+	when "Hx"
+		this_tribe[:name] = "\e[31m" + this_tribe[:name][5...-4] + "\e[0m"
+	when "Do"
+		this_tribe[:name] = "\e[36m" + this_tribe[:name][5...-4] + "\e[0m"
+	when "Rt"
+		this_tribe[:name] = "\e[32m" + this_tribe[:name][5...-4] + "\e[0m"
+	when "By"
+		this_tribe[:name] = "\e[33m" + this_tribe[:name][5...-4] + "\e[0m"
+	else
+		this_tribe[:name] = "\e[35m" + this_tribe[:name][5...-4] + "\e[0m"
+		
+	end
+end
+
+# If a tribe stays at the bottom too long, a new strategy is in order.
+def mutation(this_tribe)
+
+	strategies = ["Hx", "Do", "Rt", "By", "Pr"]
+	
+	new_strat = strategies[rand(5)]
+	if this_tribe[:is_last] > 10
+		this_tribe[:strat] = new_strat
+		this_tribe[:is_last] = -500
+	else this_tribe[:is_last] += 1
+	end
+	puts this_tribe[:is_last]
+	recolor(this_tribe)
+	
+	return this_tribe
+end
+
 def leaderboard(tribes)
 	#This function takes {tribes}, and outputs a list of tribes[n][:names], sorted by tribes[n][:status].
 	
 	board = []
 	tribes.length.times do	|i|
-		board[i] = [tribes[i][:name], tribes[i][:status]]
+		board[i] = [tribes[i][:name], tribes[i][:status], i]
 	end
 	sorted_board = board.sort_by { |a| a[1] }
+	sorted_board = sorted_board.reverse()
 
 	board.length.times do |i|
 		puts "#{sorted_board[i][0]}: #{sorted_board[i][1]}"
 	end
+	
+	puts "#{sorted_board[-1][0]} is tribe number... #{sorted_board[-1][2]}"
+	
+	tribes[sorted_board[-1][2]] = mutation(tribes[sorted_board[-1][2]])
+	
+	return tribes
 
 end
+
 
 #Load the tribes data from 'tribes.yml'
 tribes = YAML.load(File.open('tribes.yml'))
@@ -111,7 +153,7 @@ tribes = YAML.load(File.open('tribes.yml'))
 #Have the tribes EACH take 5 turn as the agressor.
 one_round(tribes, 1)
 
-leaderboard(tribes)
+tribes = leaderboard(tribes)
 #puts leaderboard(tribes)
 File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
 

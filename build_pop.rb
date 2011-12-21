@@ -40,9 +40,10 @@ def build_pop()
 		
 	
 		this_tribe[:status] = 0
+		this_tribe[:is_last] = 0
 		
 		tribes[i] = this_tribe
-		
+				
 	end
     return tribes
 end
