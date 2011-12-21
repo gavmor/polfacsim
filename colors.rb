@@ -1,0 +1,5 @@
+puts "\e[31m Hawks - Hx\e[0m"
+puts "\e[36m Doves - Do\e[0m"
+puts "\e[32m Retal - Rt\e[0m"
+puts "\e[33m Bully - By\e[0m"
+puts "\e[35m Probr - Pr\e[0m"

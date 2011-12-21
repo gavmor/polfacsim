@@ -38,8 +38,14 @@ def encounter(a, b, group)
 			end
 			
 	#If they're the same, and Do, aka _act 0, they flee
-		else a[:status] += 1
-			b[:status] += 1
+		else var = rand(2)
+			if var.odd? == true
+				a[:status] += 100
+				b[:status] += 0
+			else
+				a[:status] += 0
+				b[:status] += 100
+			end
 		end
 	
 	when +1; a[:status] += 100 
