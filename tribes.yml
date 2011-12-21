@@ -1,73 +1,73 @@
 ---
 0:
-  :name: ! "\e[31mTosotontin\e[0m"
-  :strat: Hx
-  :status: 1051
+  :name: ! "\e[35mTosotontin\e[0m"
+  :strat: Pr
+  :status: -21900
 1:
-  :name: ! "\e[33mXimomecolo\e[0m"
-  :strat: By
-  :status: 1901
+  :name: ! "\e[36mXimomecolo\e[0m"
+  :strat: Do
+  :status: -102300
 2:
-  :name: ! "\e[36mTonxōequili\e[0m"
-  :strat: Do
-  :status: -2099
+  :name: ! "\e[32mTonxōequili\e[0m"
+  :strat: Rt
+  :status: -103500
 3:
-  :name: ! "\e[35mOntennotinxa\e[0m"
-  :strat: Pr
-  :status: -749
-4:
-  :name: ! "\e[35mPocochtencho\e[0m"
-  :strat: Pr
-  :status: -899
-5:
-  :name: ! "\e[35mQuiahuochtliatzie\e[0m"
-  :strat: Pr
-  :status: -199
-6:
-  :name: ! "\e[35mToxōenoxima\e[0m"
-  :strat: Pr
-  :status: -49
-7:
-  :name: ! "\e[33mTlanacahuātlianamiol\e[0m"
-  :strat: By
-  :status: 951
-8:
-  :name: ! "\e[36mCoyatlolatlan’quitaziatoc\e[0m"
+  :name: ! "\e[36mOntennotinxa\e[0m"
   :strat: Do
-  :status: -3299
+  :status: -101600
+4:
+  :name: ! "\e[36mPocochtencho\e[0m"
+  :strat: Do
+  :status: -101900
+5:
+  :name: ! "\e[33mQuiahuochtliatzie\e[0m"
+  :strat: By
+  :status: 62050
+6:
+  :name: ! "\e[31mToxōenoxima\e[0m"
+  :strat: Hx
+  :status: 53050
+7:
+  :name: ! "\e[35mTlanacahuātlianamiol\e[0m"
+  :strat: Pr
+  :status: -16850
+8:
+  :name: ! "\e[35mCoyatlolatlan’quitaziatoc\e[0m"
+  :strat: Pr
+  :status: -24350
 9:
   :name: ! "\e[36mAyame’anzanomatzo\e[0m"
   :strat: Do
-  :status: -2499
+  :status: -106300
 10:
-  :name: ! "\e[33mTochtlia’tōequilisconochla\e[0m"
-  :strat: By
-  :status: 1101
+  :name: ! "\e[35mTochtlia’tōequilisconochla\e[0m"
+  :strat: Pr
+  :status: -20400
 11:
-  :name: ! "\e[36mTlōxō’inomesochque\e[0m"
-  :strat: Do
-  :status: -2699
+  :name: ! "\e[33mTlōxō’inomesochque\e[0m"
+  :strat: By
+  :status: 59200
 12:
   :name: ! "\e[32mTlōsoto’locatzomitzio’mitellatlozo\e[0m"
   :strat: Rt
-  :status: -2199
+  :status: -101400
 13:
-  :name: ! "\e[33mHuotlaca’huamannenpaxixlla\e[0m"
-  :strat: By
-  :status: 1401
-14:
-  :name: ! "\e[35mOmmayacaxiyolillo’chcotlopaxiyōhimi\e[0m"
+  :name: ! "\e[35mHuotlaca’huamannenpaxixlla\e[0m"
   :strat: Pr
-  :status: -749
+  :status: -21350
+14:
+  :name: ! "\e[31mOmmayacaxiyolillo’chcotlopaxiyōhimi\e[0m"
+  :strat: Hx
+  :status: 57200
 15:
   :name: ! "\e[35mTantlahtoc\e[0m"
   :strat: Pr
-  :status: -149
+  :status: -20250
 16:
-  :name: ! "\e[31mTlioxtla’huayotlinoaxlla\e[0m"
-  :strat: Hx
-  :status: 851
+  :name: ! "\e[33mTlioxtla’huayotlinoaxlla\e[0m"
+  :strat: By
+  :status: 57050
 17:
-  :name: ! "\e[32mPixō’huoquimicahla\e[0m"
-  :strat: Rt
-  :status: -1499
+  :name: ! "\e[33mPixō’huoquimicahla\e[0m"
+  :strat: By
+  :status: 60850

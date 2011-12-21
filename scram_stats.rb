@@ -9,19 +9,14 @@ def scram_strats(tribes)
 #	puts "How many tribes in the valley?"
 	pop = tribes.length	
 	pop.times do |i|
-#		this_tribe = {}
-#		puts "Name?"
-#		name = gets.chomp()
-#		this_tribe[:name] = name
+
 		this_tribe = tribes[i]
-		puts "Got it; the honorable #{tribes[i][:name]}"
 
 		strategies = ["Hx", "Do", "Rt", "By", "Pr"]
 		
-		#puts "Strategy?"
-		#strat = gets.chomp()
 		strat = strategies[rand(5)]
 		this_tribe[:strat] = strat
+
 		case this_tribe[:strat] 
 		when "Hx"
 			this_tribe[:name] = "\e[31m" + this_tribe[:name] + "\e[0m"

@@ -4,5 +4,6 @@ clear
 
 echo "Ages pass, and nations grow older."
 
-ruby fight.rb
-ruby fight.rb
+ruby clear.rb
+
+while (true) do ruby fight.rb; sleep 0.5; done;
