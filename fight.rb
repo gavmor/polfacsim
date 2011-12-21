@@ -16,40 +16,46 @@ def encounter(a, b, group)
 	actions = {"Hx" => 1, "Do" => 0, "Rt" => 0, "By" => 1, "Pr" => rand(2)}
 	
 	a_act = actions[ a[:strat] ]  
+	
+	if a_act == 1
+		actions = {"Hx" => 1, "Do" => 0, "Rt" => 1, "By" => 0, "Pr" => 1}
+	else actions = {"Hx" => 1, "Do" => 0, "Rt" => 0, "By" => 1, "Pr" => rand(2)}
+	end
+
 	b_act = actions[ b[:strat] ]
 
 	case a_act <=> b_act
 
 	#Players with act of 0 is Docile, 1 is Hxing.  No fight. Whomever wins gets the gold.
-	when -1; a[:status] -= 1
-		b[:status] += 100
+	when -1; a[:status] -= 0
+		b[:status] += 50
 	
 	#If they're the same, and Hx, aka _act 1, they fight, and their odds are even.
 	when  0; if a_act.odd? == true
 			var = rand(2)        	 	
 			if var.odd? == true
 			#Heads, I get it.				
-				a[:status] -= 110 
+				a[:status] -= 510 
 				b[:status] += 40
 
 			#Tails the other guy gets it.
 			else a[:status] += 40 
-				b[:status] -= 110
+				b[:status] -= 510
 			end
 			
 	#If they're the same, and Do, aka _act 0, they flee
 		else var = rand(2)
 			if var.odd? == true
-				a[:status] += 100
+				a[:status] += 50
 				b[:status] += 0
 			else
 				a[:status] += 0
-				b[:status] += 100
+				b[:status] += 50
 			end
 		end
 	
-	when +1; a[:status] += 100 
-		b[:status] -= 1
+	when +1; a[:status] += 50 
+		b[:status] -= 0
 		
 	end
 
@@ -59,13 +65,9 @@ end
 
 
 
-not_tribes = {0=>{:name=>"Alpha", :strat=>"Hx", :status=>0}, 1=>{:name=>"Beta", :strat=>"Hx", :status=>0}, 2=>{:name=>"Gamma", :strat=>"Hx", :status=>0}, 3=>{:name=>"Delta", :strat=>"Hx", :status=>0}, 4=>{:name=>"Epsilon", :strat=>"Hx", :status=>0}}
-
-
-
 # This function iterates through ever member of the names list, giving each a turn as the argument for take_turn.
 def one_round(tribes, turns)
-	#Give ever tribe a turn
+	#Give every tribe a turn
 	tribes.length.times do |i|
 #		puts "#{i}. Tribe #{tribes[i][:name]}, #{tribes[i][:strat]} has #{tribes[i][:status]}."
 		contestants = ""
