@@ -15,6 +15,12 @@ def scram_strats(tribes)
 		strategies = ["Hx", "Do", "Rt", "By", "Pr"]
 		
 		strat = strategies[rand(5)]
+
+#		if i > pop/2
+#			strat = "Do"
+#		else
+#			strat = "Do"
+#		end
 		this_tribe[:strat] = strat
 
 		case this_tribe[:strat] 
@@ -31,10 +37,9 @@ def scram_strats(tribes)
 			
 		end
 		
-		puts "Good luck, #{this_tribe[:strat]}"
+#		puts "Good luck, #{this_tribe[:strat]}"
 		
 	
-		this_tribe[:status] = 0
 		
 		tribes[i] = this_tribe
 		
@@ -43,5 +48,5 @@ def scram_strats(tribes)
 end
 
 stuff = scram_strats(tribes)
-puts stuff
+#puts stuff
 File.open('tribes.yml', 'w') {|f| f.puts(stuff.to_yaml) }

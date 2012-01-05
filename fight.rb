@@ -1,5 +1,7 @@
 require 'yaml' #to save #{tribes}, later.
 
+puts "\e[5m --------------------------------------------------- \e[0m"
+
 
 #This function takes a list, and a desired number of contenders and returns a list of randomly selected members of the hat.
 def from_a_hat(hat, contenders)
@@ -10,8 +12,10 @@ def from_a_hat(hat, contenders)
 	return output
 end
 
+
 # Here is where current_player takes a turn facing off.
-def encounter(a, b, group)
+def encounter(a, b, tribes)
+
 
 	actions = {"Hx" => 1, "Do" => 0, "Rt" => 0, "By" => 1, "Pr" => rand(2)}
 	
@@ -39,7 +43,7 @@ def encounter(a, b, group)
 				b[:status] += 40
 
 			#Tails the other guy gets injured.
-			else a[:status] += 40 
+			else a[:status] += 40
 				b[:status] -= 110
 			end
 			
@@ -58,32 +62,24 @@ def encounter(a, b, group)
 		b[:status] -= 0
 		
 	end
-
-    adjustments = [a[:status], b[:status]]
-	return adjustments
+#	adjustments = [a[:status], b[:status]]
+	
+#	return adjustments
 end
-
 
 
 # This function iterates through ever member of the names list, giving each a turn as the argument for take_turn.
 def one_round(tribes, turns)
 	#Give every tribe a turn
 	tribes.length.times do |i|
-#		puts "#{i}. Tribe #{tribes[i][:name]}, #{tribes[i][:strat]} has #{tribes[i][:status]}."
-		contestants = ""
-		#Current tribe gets an encounter against five random opponents.
+#		tribes[i][:status] = tribes[i][:status]/2
+
+		#Current tribe gets an encounter against #{turns} random opponents.
 		turns.times do |r|
 			who_next = rand(tribes.length)
-
-			#We're looking for status changes, so we run an encounter between tribes[i], whose turn it is,
-			#and tribes[whos_next], the current of #{times} randomly selected opponents.
-			win_loss_adjustments = encounter(tribes[i], tribes[who_next], tribes)
-		
-			tribes[i][:status] = win_loss_adjustments[0]
-			tribes[who_next][:status] = win_loss_adjustments[1]
-			
-			contestants <<  "#{tribes[who_next][:name]}, "
-
+			if who_next != i
+				encounter(tribes[i], tribes[who_next], tribes)			
+			else end
 		end
 #		puts "#{tribes[i][:name]} fights #{contestants}"
 #		puts "Now, tribe #{tribes[0][:name]} has #{tribes[0][:status]}."
@@ -108,14 +104,15 @@ def recolor(this_tribe)
 end
 
 # If a tribe stays at the bottom too long, a new strategy is in order.
-def mutation(this_tribe)
+def mutation(this_tribe, next_guys_stat)
 
 	strategies = ["Hx", "Do", "Rt", "By", "Pr"]
 	
 	new_strat = strategies[rand(5)]
-	if this_tribe[:is_last] > 10
+	if this_tribe[:is_last] > 100
 		this_tribe[:strat] = new_strat
-		this_tribe[:is_last] = -500
+		this_tribe[:is_last] = 0
+		this_tribe[:status] = next_guys_stat
 	else this_tribe[:is_last] += 1
 	end
 	puts this_tribe[:is_last]
@@ -136,12 +133,15 @@ def leaderboard(tribes)
 
 	board.length.times do |i|
 		puts "#{sorted_board[i][0]}: #{sorted_board[i][1]}"
+# #{tribes[sorted_board[-1][2]][:status]-sorted_board[i][1]}"
 	end
 	
-	puts "#{sorted_board[-1][0]} is tribe number... #{sorted_board[-1][2]}"
+#	puts "#{sorted_board[-1][0]} is tribe number... #{sorted_board[-1][2]}"
 	
-	tribes[sorted_board[-1][2]] = mutation(tribes[sorted_board[-1][2]])
-	
+	#Refer to item [2] of the last leaderboard entry, which is the number that entry goes by when it's in #{tribes}.
+	#Set that tribe's data to a copy of itself run through mutation, changing its [:strat], [:name], and [:status].
+	tribes[sorted_board[-1][2]] = mutation(tribes[sorted_board[-1][2]], sorted_board[-2][1])
+
 	return tribes
 
 end
@@ -151,10 +151,9 @@ end
 tribes = YAML.load(File.open('tribes.yml'))
 
 #Have the tribes EACH take 5 turn as the agressor.
-one_round(tribes, 1)
+one_round(tribes, 5)
 
 tribes = leaderboard(tribes)
 #puts leaderboard(tribes)
 File.open('tribes.yml', 'w')  {|f| f.puts(tribes.to_yaml) }
 
-puts "\e[5m ------------------------------------------------------------------------------------ \e[0m"

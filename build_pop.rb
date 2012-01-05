@@ -9,11 +9,11 @@ def build_pop()
 	pop = gets.to_i	
 	pop.times do |i|
 		this_tribe = {}
-		puts "Name?"
+#		puts "Name?"
 #		name = gets.chomp()
 		name = (0...8).map{65.+(rand(25)).chr}.join
 		this_tribe[:name] = name
-		puts "Got it; the honorable #{this_tribe[:name]}"
+#		puts "Got it; the honorable #{this_tribe[:name]}"
 
 		strategies = ["Hx", "Do", "Rt", "By", "Pr"]
 		
@@ -36,7 +36,7 @@ def build_pop()
 			
 		end
 		
-		puts "Good luck, #{this_tribe[:strat]}"
+#		puts "Good luck, #{this_tribe[:strat]}"
 		
 	
 		this_tribe[:status] = 0
@@ -49,5 +49,5 @@ def build_pop()
 end
 
 stuff = build_pop()
-puts stuff
+#puts stuff
 File.open('tribes.yml', 'w') {|f| f.puts(stuff.to_yaml) }

@@ -1,61 +1,101 @@
 ---
 0:
-  :name: ! "\e[36mUARBYAYW\e[0m"
-  :strat: Do
-  :status: 48950
+  :name: ! "\e[35mCDRYTWHN\e[0m"
+  :strat: Pr
+  :status: 27260
   :is_last: 0
 1:
-  :name: ! "\e[35mWDWQLWLL\e[0m"
-  :strat: Pr
-  :status: 30540
-  :is_last: -382
-2:
-  :name: ! "\e[36mVGXSYRAH\e[0m"
-  :strat: Do
-  :status: 47100
-  :is_last: 0
-3:
-  :name: ! "\e[36mJNKIKOWX\e[0m"
-  :strat: Do
-  :status: 49200
-  :is_last: 0
-4:
-  :name: ! "\e[31mISPXROEV\e[0m"
-  :strat: Hx
-  :status: 40030
-  :is_last: -492
-5:
-  :name: ! "\e[33mEPTUFGKO\e[0m"
+  :name: ! "\e[33mADTLUXIA\e[0m"
   :strat: By
-  :status: 75830
+  :status: 41460
+  :is_last: 0
+2:
+  :name: ! "\e[32mYGSQQCTF\e[0m"
+  :strat: Rt
+  :status: 26080
+  :is_last: 24
+3:
+  :name: ! "\e[32mQHPGHJND\e[0m"
+  :strat: Rt
+  :status: 22750
+  :is_last: 25
+4:
+  :name: ! "\e[36mQJQGVDCC\e[0m"
+  :strat: Do
+  :status: 50200
+  :is_last: 0
+5:
+  :name: ! "\e[36mJDUAFNKE\e[0m"
+  :strat: Do
+  :status: 46800
   :is_last: 0
 6:
-  :name: ! "\e[36mEUWFSAQR\e[0m"
-  :strat: Do
-  :status: 49300
-  :is_last: 0
+  :name: ! "\e[32mEGKPYMGS\e[0m"
+  :strat: Rt
+  :status: 23150
+  :is_last: 3
 7:
-  :name: ! "\e[31mPQEWXADO\e[0m"
-  :strat: Hx
-  :status: 48280
+  :name: ! "\e[35mAXWNFFPI\e[0m"
+  :strat: Pr
+  :status: 27930
   :is_last: 0
 8:
-  :name: ! "\e[33mNKENLYHQ\e[0m"
-  :strat: By
-  :status: 79010
-  :is_last: -494
-9:
-  :name: ! "\e[36mLJBRUOPB\e[0m"
-  :strat: Do
-  :status: 28450
-  :is_last: -354
-10:
-  :name: ! "\e[33mOAMVEWHP\e[0m"
-  :strat: By
-  :status: 78810
-  :is_last: -485
-11:
-  :name: ! "\e[35mGDOQJCOH\e[0m"
+  :name: ! "\e[35mKEURFRFE\e[0m"
   :strat: Pr
-  :status: 38780
-  :is_last: 4
+  :status: 29470
+  :is_last: 6
+9:
+  :name: ! "\e[33mBYYTWDBQ\e[0m"
+  :strat: By
+  :status: 48800
+  :is_last: 1
+10:
+  :name: ! "\e[32mATLIYIMV\e[0m"
+  :strat: Rt
+  :status: 21990
+  :is_last: 53
+11:
+  :name: ! "\e[31mXSSDIGND\e[0m"
+  :strat: Hx
+  :status: 34650
+  :is_last: 0
+12:
+  :name: ! "\e[33mDSANVAGQ\e[0m"
+  :strat: By
+  :status: 43560
+  :is_last: 0
+13:
+  :name: ! "\e[31mTTJPTRLX\e[0m"
+  :strat: Hx
+  :status: 28510
+  :is_last: 0
+14:
+  :name: ! "\e[36mWMXSVHGI\e[0m"
+  :strat: Do
+  :status: 46800
+  :is_last: 0
+15:
+  :name: ! "\e[31mSSMWVPHM\e[0m"
+  :strat: Hx
+  :status: 38570
+  :is_last: 0
+16:
+  :name: ! "\e[35mOLFLNPRG\e[0m"
+  :strat: Pr
+  :status: 24310
+  :is_last: 31
+17:
+  :name: ! "\e[36mCYCXVKUR\e[0m"
+  :strat: Do
+  :status: 47700
+  :is_last: 0
+18:
+  :name: ! "\e[32mCSWYYTVN\e[0m"
+  :strat: Rt
+  :status: 26650
+  :is_last: 0
+19:
+  :name: ! "\e[36mDXIRGELP\e[0m"
+  :strat: Do
+  :status: 45350
+  :is_last: 0
